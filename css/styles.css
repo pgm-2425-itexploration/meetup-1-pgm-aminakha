@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #6f57cf;
+    --standard-gap : 1rem;
+}
+.container  {
+    margin: 0 auto; 
+ & header {
+    border: 1px solid #ccc;
+    padding: var(--standard-gap);
+    margin-top: var(--standard-gap);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+            background-color: white;
+z-index: 1000;
+    & nav {
+        display: flex;
+        align-items: center;    
+        justify-content: space-between;
+        & ul {
+            display: flex;
+            gap : var(--standard-gap);
+            & li {
+                & p {
+                    & a {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        transition: all 0.05s ;
+                        &:hover {
+                            color: var(--primary-color);
+                            border-bottom: 2px solid var(--primary-color);
+                            transition: all 0.05s ;
+                        }
+                }
+                }
+               
+            }
+        }
+    }
+ }
+
+ & main {  
+     
+ & .hero {
+    position: relative;
+    & figure {
+        & .hero__img {
+            width: 100%;
+            
+            object-fit: cover;
+        }
+    }
+    & .hero__description {
+        z-index: 10002;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+        padding: var(--standard-gap);
+        & p {
+            margin-bottom : var(--standard-gap);    
+            margin-top: var(--standard-gap);
+          & span {
+            background: linear-gradient(45deg, orange, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        & h1 {
+            font-size: 3rem;
+        }
+        & a {
+                font-size: 1.2rem;
+                background-color: var(--primary-color);
+                padding: 1rem 1rem;
+                display: inline-block;
+                transition: all 0.2s;
+                &:hover {
+                    box-shadow: 0px 4px rgba(255, 255, 255, 0.2);
+                   transform: translateY(-4px);
+                   transition: all 0.2s;
+                }
+        }
+        
+    }
+ }
+   
+}
+ }
