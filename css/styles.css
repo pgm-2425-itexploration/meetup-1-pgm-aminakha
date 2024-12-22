@@ -7,6 +7,8 @@
     --secondary-color: #a696cb;
     --standard-gap : 1rem;
 }
+
+
 .container  {
    max-width: 100%;
  & header {
@@ -201,6 +203,36 @@ z-index: 1000;
     }
     }
     background-color: var(--secondary-color);
+   
+   }
+   & .meetup-container {
+    display: flex;
+    align-items: center;
+    & .meetup-content {
+        & .arrow {
+            width:2rem;
+            margin : 0 auto;
+            margin-bottom: var(--standard-gap);
+        }
+         & h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding: var(--standard-gap);
+  }
+  & .meetup-description {
+    & .meetup-description__img {
+       & img {
+        border-radius: 5px;
+        height: 20rem;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: var(--standard-gap);
+       }
+    }
+  }
+    }
    
    }
 }

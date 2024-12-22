@@ -593,6 +593,14 @@ video {
   margin-right: auto;
 }
 
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
 .w-full {
   width: 100%;
 }
@@ -601,9 +609,42 @@ video {
   max-width: 64rem;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 :root {
@@ -794,7 +835,41 @@ video {
       }
       background-color: var(--secondary-color);
     }
+    & .meetup-container {
+      display: flex;
+      align-items: center;
+      & .meetup-content {
+        & .arrow {
+          width:2rem;
+          margin : 0 auto;
+          margin-bottom: var(--standard-gap);
+        }
+        & h2 {
+          font-size: 2rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          padding: var(--standard-gap);
+        }
+        & .meetup-description {
+          & .meetup-description__img {
+            & img {
+              border-radius: 5px;
+              height: 20rem;
+              width: 100%;
+              -o-object-fit: cover;
+                 object-fit: cover;
+              margin-bottom: var(--standard-gap);
+            }
+          }
+        }
+      }
+    }
   }
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 @media (min-width: 640px) {
